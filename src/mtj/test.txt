@@ -1,0 +1,22 @@
+boolean isUnit = true;
+for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+        if (i == j) {
+            if (A[i][j] != 1) {
+                isUnit = false;
+                break;
+            }
+        } else {
+            if (A[i][j] != 0) {
+                isUnit = false;
+                break;
+            }
+        }
+    }
+    if (!isUnit) break;
+}
+if (isUnit) {
+    System.out.println("YES");
+} else {
+    System.out.println("NO");
+}
